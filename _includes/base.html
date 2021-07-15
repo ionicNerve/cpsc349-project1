@@ -21,18 +21,6 @@ site: Pet Photos
         {% endunless %}
     
         {{ content }}
-    
-        <ul>
-            {% for photo in collections.photos %}
-                <li>
-                    <a href="{{ photo.url }}">
-                        A {{ photo.data.photo_keyword }} photo
-                        by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
-                    </a>
-                    <br>{{ photo.data.ai_description }} 
-                </li>
-            {% endfor %}
-        </ul>
         
         <footer>
             <h1>Pet Photos from Unsplash</h1>
