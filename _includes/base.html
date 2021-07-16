@@ -1,18 +1,17 @@
----
-site: Pet Photos
----
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8"/>
+        <title>A document with pet photos</title>
         <link rel="stylesheet" href="https://unpkg.com/mvp.css">
     </head>
+    <body style="background-color: {{color_keyword}};">
     <nav>
         <a href="/about/">About</a>
     </nav>
     <header>
         <h1>Pet Photos from Unsplash</h1>
     </header>
-    <body style="background-color: {{color_keyword}};">
         <h1>{{ site }}</h1>
     
         {% unless page.url == '/' %}
