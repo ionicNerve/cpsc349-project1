@@ -5,14 +5,13 @@
         <title>A document with pet photos</title>
         <link rel="stylesheet" href="https://unpkg.com/mvp.css">
     </head>
-    <body>
+    <body style="background-color: {{color_keyword}};">
     <nav>
         <a href="/about/">About</a>
     </nav>
     <header>
         <h1>Pet Photos from Unsplash</h1>
     </header>
-    
         <h1>{{ site }}</h1>
     
         {% unless page.url == '/' %}
@@ -20,7 +19,21 @@
         {% endunless %}
     
         {{ content }}
-        
+        <div>
+            <div>
+                <h1>Info</h1>
+                <p>Camera Make: {{exif_camera_make}}</p>
+                <p>Camera Model: {{exif_camera_model}}</p>
+                <p>Downloads: {{stats_downloads}}</p>
+                <p>Photo Submitted On: {{photo_submitted_at}}</p>
+                <p>Tags: {{tags}}</p>
+            </div>
+            <div>
+                <h1>Credit</h1>
+                <p>Photographer Name: {{photographer_first_name}} {{photographer_last_name}}</p>
+                <p>Username: {{photographer_username}}</p>
+            </div>
+        </div>
         <footer>
             <h1>Pet Photos from Unsplash</h1>
         </footer>
