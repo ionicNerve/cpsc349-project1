@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npx @11ty/eleventy --serve"
+    "build": "eleventy"
   },
   "author": "Kenytt Avery",
   "repository": {
